@@ -9,7 +9,7 @@
 class RGBImagePrivate : public RGBImage {
 
 private:
-	RGB * AndHangAPearlInEveryCowslipsEar;
+	RGB * pixelArray;
 public:
 
 	RGBImagePrivate();
