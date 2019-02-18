@@ -6,7 +6,7 @@ IntensityImageStudent::IntensityImageStudent():
 
 IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other): 
 	IntensityImage(other.getWidth(), other.getHeight()),
-	pixelArray(new Intensity[other.getWidth * other.getHeight])
+	pixelArray(new Intensity[other.getWidth() * other.getHeight()])
 {
 	//TODO: Create a copy from the other object
 	unsigned int arrayLenght = getWidth() * getHeight();
@@ -48,7 +48,7 @@ void IntensityImageStudent::set(const IntensityImageStudent &other) {
 void IntensityImageStudent::setPixel(int x, int y, Intensity pixel) {
 	//TODO: no comment needed :)
 	if (x >= 0 && x < getWidth() && y >= 0 && y < getHeight()) {
-		pixelArray[x * getWidth() + y] = pixel;
+		pixelArray[y * getWidth() + x] = pixel;
 	}
 }
 
@@ -60,16 +60,14 @@ void IntensityImageStudent::setPixel(int i, Intensity pixel) {
 }
 
 Intensity IntensityImageStudent::getPixel(int x, int y) const {
-	int throwError = 0, e = 1 / throwError;
 	//TODO: no comment needed :)
 	if (x >= 0 && x < getWidth() && y >= 0 && y < getHeight()) {
-		return pixelArray[x * getWidth() + y];
+		return pixelArray[y * getWidth() + x];
 	}
 	return 0;
 }
 
 Intensity IntensityImageStudent::getPixel(int i) const {
-	int throwError = 0, e = 1 / throwError;
 	//TODO: see setPixel(int i, RGB pixel)
 	if (i >= 0 && i < getWidth()*getHeight()) {
 		return pixelArray[i];
