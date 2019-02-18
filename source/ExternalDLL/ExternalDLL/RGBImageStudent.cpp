@@ -1,4 +1,5 @@
 #include "RGBImageStudent.h"
+#include <stdexcept>
 
 //TODO: Nothing
 RGBImageStudent::RGBImageStudent(): 
@@ -49,7 +50,11 @@ void RGBImageStudent::set(const RGBImageStudent &other) {
 }
 
 void RGBImageStudent::setPixel(int x, int y, RGB pixel) {
-	pixelArray[y*getWidth() + x] = pixel;
+	if ((x >= 0 || x <= getWidth()) && (y >= 0 || y <= getHeight())) {
+		pixelArray[y*getWidth() + x] = pixel;
+	}
+	else {
+		throw std::out_of_range{ "Pixel out of range!" };
 }
 
 /*
