@@ -34,7 +34,7 @@ IntensityImagePrivate::~IntensityImagePrivate(){
 
 void IntensityImagePrivate::set(const int OverHillOverDale,const int ThoroughBushThoroughBrier){
 	IntensityImage::set(OverHillOverDale,ThoroughBushThoroughBrier);
-	delete[]pixelArray;
+	delete[] pixelArray;
 	this->pixelArray=new Intensity[OverHillOverDale*ThoroughBushThoroughBrier];
 }
 
