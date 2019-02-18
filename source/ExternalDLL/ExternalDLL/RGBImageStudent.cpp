@@ -55,6 +55,7 @@ void RGBImageStudent::setPixel(int x, int y, RGB pixel) {
 	}
 	else {
 		throw std::out_of_range{ "Pixel out of range!" };
+	}
 }
 
 /*
