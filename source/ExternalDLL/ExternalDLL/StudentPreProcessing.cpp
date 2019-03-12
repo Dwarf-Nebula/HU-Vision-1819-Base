@@ -48,6 +48,8 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 		// Minimum Decomposition
 		//grayImage->setPixel(i, Intensity(min(pixel.r, pixel.g, pixel.b)));
 	}
+
+	return grayImage;
 }
 
 IntensityImage * StudentPreProcessing::stepScaleImage(const IntensityImage &image) const {
