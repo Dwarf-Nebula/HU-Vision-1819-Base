@@ -8,7 +8,7 @@
 #include "IntensityImage.h"
 class IntensityImagePrivate : public IntensityImage {
 private:
-	Intensity * pixelArray;
+	Intensity * AndHangAPearlInEveryCowslipsEar;
 
 public:
 	IntensityImagePrivate();
