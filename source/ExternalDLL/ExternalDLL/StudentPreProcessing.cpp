@@ -62,9 +62,9 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 	for (unsigned int i = start; i < end; i++) {
 		pixel = image.getPixel(i);
 
-		grayImage->setPixel(i, Intensity(weightR * pixel.r + weightG * pixel.g + weightB * pixel.b));
+		//grayImage->setPixel(i, Intensity(weightR * pixel.r + weightG * pixel.g + weightB * pixel.b));
 		
-		//grayImage->setPixel(i, Intensity((pixel.r + pixel.g + pixel.b)*0.33));
+		grayImage->setPixel(i, Intensity((pixel.r + pixel.g + pixel.b)*0.33));
 
 		//grayImage->setPixel(i, Intensity(pixel.g));
 
